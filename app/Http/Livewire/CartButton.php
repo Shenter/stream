@@ -30,4 +30,10 @@ class CartButton extends Component
     {
         return view('livewire.cart-button');
     }
+
+    public function Cart()
+    {
+
+        return redirect()->route('cart');
+    }
 }

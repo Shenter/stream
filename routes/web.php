@@ -17,8 +17,12 @@ Route::get('/', function () {
     return  redirect('dashboard');
 });
 
-Route::middleware(['auth:sanctum'])->get('/dashboard', function () {
-    return view('dashboard',['products'=>\App\Models\Product::all()]);
-})->name('dashboard');
+
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::get('/dashboard', 'App\Http\Controllers\CartController@index')->name('dashboard');
+    Route::get('/cart','App\Http\Controllers\CartController@cart')->name('cart');
+});
+
+
 
 require __DIR__.'/auth.php';
