@@ -14,12 +14,12 @@
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     @livewireStyles
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="{{route('dashboard')}}">Main Page</a>
-        <a class="navbar-brand" href="">Edit items</a>
+        <a class="navbar-brand" href="{{route('product.index')}}">Edit items</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -32,14 +32,12 @@
     </div>
 </nav>
 
+
 <!-- Section-->
-<section class="py-5">
-    <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+ 
             @yield('content')
-        </div>
-    </div>
-</section>
+
+<div class="wrapper flex-grow-1"></div>
 <!-- Footer-->
 <footer class="py-5 bg-dark">
     <div class="container"><p class="m-0 text-center text-white">Copyright &copy; </p></div>

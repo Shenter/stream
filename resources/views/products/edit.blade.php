@@ -1,15 +1,24 @@
 @extends('products.layout')
 
 @section('content')
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="items-center justify-center align-content-center align-items-center">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            </div>
+            <div class="items-center justify-center align-content-center align-items-center">
+                Edit item
+            </div>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
 
 
 
@@ -21,4 +30,7 @@
             Price: <input type="number" name="price" value="{{$product->price/100}}">
                <input type="submit" value="Save">
            </form>
+            </div>
+        </div>
+    </section>
 @endsection
