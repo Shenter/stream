@@ -51,4 +51,10 @@ class User extends Authenticatable
         return $this->carts->where(['product_id'=>$productId]);
     }
 
+    public function products()
+    {
+        //return $this->hasManyThrough(Product::class,Cart::class,'id','id','id');
+        return $this->belongsToMany(Product::class,'carts');
+    }
+
 }

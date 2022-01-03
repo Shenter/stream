@@ -21,7 +21,11 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/dashboard', 'App\Http\Controllers\CartController@index')->name('dashboard');
     Route::get('/cart','App\Http\Controllers\CartController@cart')->name('cart');
+    Route::resource('product', App\Http\Controllers\ProductController::class,
+     );
 });
+
+
 
 
 

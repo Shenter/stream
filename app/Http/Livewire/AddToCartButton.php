@@ -16,7 +16,7 @@ class AddToCartButton extends Component
     }
 
 
-    public function addToCart($productId)
+    public function addToCart($productId)//TODO Вынести в репо
     {
         $this->emit('refreshCartButton');
         $this->emit('addShowCartButton');

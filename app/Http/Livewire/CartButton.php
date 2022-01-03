@@ -18,8 +18,9 @@ class CartButton extends Component
     {
         $this->count = Auth::user()->carts->count()  ;
         $price = 0;
+
         foreach (Auth::user()->carts as $item) {
-            $price += Product::find($item->product_id)->cost;
+            $price += Product::find($item->product_id)->priceInDollars;
         }
         $this->price = $price;
 

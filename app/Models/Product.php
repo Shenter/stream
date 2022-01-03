@@ -8,9 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    protected $fillable=['title','price'];
 
-    public function getCostAttribute()
+    public function getPriceInDollarsAttribute()
     {
         return $this->price/100;
     }
+//    public function setPriceAttribute()
+//    {
+//        return $this->price*100;
+//    }
+
+//    public function countForUser()
+//    {
+//        return count()
+//    }
 }

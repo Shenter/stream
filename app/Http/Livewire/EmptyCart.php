@@ -29,7 +29,7 @@ class EmptyCart extends Component
             //надо сделать через relation
             $price = 0;
             foreach (Cart::findByProduct($this->product_id) as $item) {
-                $price += Product::find($item->product_id)->cost;
+                $price += Product::find($item->product_id)->priceInDollars;
 
             }
             $this->price = $price;

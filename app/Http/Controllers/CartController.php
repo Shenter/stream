@@ -13,8 +13,9 @@ class CartController extends Controller
 
     public function cart()
     {
-        $carts = auth()->user()->carts->groupBy('product_id');
 
-        return view('cart',['carts'=>$carts]);
+        $products = auth()->user()->products->groupBy('id');
+
+        return view('cart',['products'=>$products]);
     }
 }
