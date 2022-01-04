@@ -16,7 +16,7 @@ Cart contents
         <th scope="col"></th>
         <th scope="col">Name</th>
         <th scope="col">In Cart</th>
-        <th scope="col">+</th>
+        <th scope="col">+/-</th>
 
 
     </tr>
@@ -31,14 +31,12 @@ Cart contents
             </td>
             <!-- Product details-->
             <td>{{$product->first()->title}}</td>
-            <td>{{$product->count()}}</td>
+
+            <td>@livewire('product-count',['product_id'=>$product->first()->id])</td>
             <td>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                    +
-                </button>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                    -
-                </button>
+            @livewire('add-product-button',['product_id'=>$product->first()->id])
+                @livewire('remove-product-button',['product_id'=>$product->first()->id])
+
             </td>
 
 
