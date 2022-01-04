@@ -12,16 +12,18 @@ class Cart extends Model
     use HasFactory;
 
 
-
-    public function user()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function user(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne('App\Models\User');
     }
-//    public function count()
-//    {
-//        return $this->where(['user_id'=>Auth::user()->id])->count;
-//    }
 
+    /**
+     * @param $productId
+     * @return mixed
+     */
     public static function findByProduct($productId)
     {
         return  self::where(['user_id'=>Auth::user()->id,'product_id'=>$productId])->get() ;

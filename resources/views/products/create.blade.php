@@ -4,7 +4,7 @@
     <section class="py-5">
 
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="items-center justify-center align-content-center align-items-center"> CREATE new item</div>
+            <div class="items-center justify-center align-content-center align-items-center"> {{__('content.Create_new_item')}}</div>
 
                 @if ($errors->any())
                 <div class="items-center justify-center align-content-center align-items-center">
@@ -27,9 +27,9 @@
            <form action="{{route('product.store')}}"  method="POST">
                @csrf
 
-            Title: <input type="text" name="title" placeholder="Enter title...">
+               {{__('content.Title')}} <input type="text" name="title" placeholder="Enter title...">
 
-            Price: <input type="number" name="price" placeholder="Enter price...">
+               {{__('content.Price')}}: <input type="number" name="price" placeholder="Enter price...">
                <input type="submit" value="Save">
            </form>
             </div>

@@ -19,7 +19,7 @@ class AddProductButton extends Component
         return view('livewire.add-product-button');
     }
 
-    public function addToCart($productId)//TODO Вынести в репо
+    public function addToCart($productId)
     {
         $this->emit('refreshCartButton');
         $this->emit('addShowCartButton');

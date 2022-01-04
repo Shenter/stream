@@ -24,12 +24,12 @@
                         <!-- Product details-->
                         <td>{{$product->title}}</td>
                         <td>{{$product->priceInDollars}}$</td>
-                        <td><a href="{{route('product.edit',['product'=>$product->id])}}">Edit</a></td>
+                        <td><a href="{{route('product.edit',['product'=>$product->id])}}">{{__('content.Edit')}}</a></td>
                         <td>
                         <form action="{{ url('product' , $product->id ) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button>Delete</button>
+                            <button>{{__('content.Delete')}}</button>
                         </form>
                         </td>
 
@@ -38,7 +38,7 @@
             @endforeach
             </table>
 
-        <a href="{{route('product.create')}}"> +Add new</a>
+        <a href="{{route('product.create')}}"> +{{__('content.Add_new')}}</a>
             </div>
         </div>
     </section>

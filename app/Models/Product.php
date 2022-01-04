@@ -14,13 +14,5 @@ class Product extends Model
     {
         return $this->price/100;
     }
-//    public function setPriceAttribute()
-//    {
-//        return $this->price*100;
-//    }
 
-//    public function countForUser()
-//    {
-//        return count()
-//    }
 }

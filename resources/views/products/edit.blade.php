@@ -15,7 +15,7 @@
                 @endif
             </div>
             <div class="items-center justify-center align-content-center align-items-center">
-                Edit item
+                {{__('content.Edit_item')}}
             </div>
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
@@ -25,10 +25,10 @@
            <form action="{{route('product.update',['product'=>$product->id])}}"  method="POST">
                @csrf
                @method('PUT')
-            Title: <input type="text" name="title" value="{{$product->title}}">
+               {{__('content.Title')}}: <input type="text" name="title" value="{{$product->title}}">
 
-            Price: <input type="number" name="price" value="{{$product->price/100}}">
-               <input type="submit" value="Save">
+               {{__('content.Price')}}: <input type="number" name="price" value="{{$product->price/100}}">
+               <input type="submit" value="{{__('content.Save')}}">
            </form>
             </div>
         </div>

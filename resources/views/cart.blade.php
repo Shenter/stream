@@ -8,14 +8,14 @@
 
 
     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-Cart contents
+        {{__('content.Cart_contents')}}
     </div>
 <table  class="table table-hover ">
     <thead>
     <tr>
         <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col">In Cart</th>
+        <th scope="col">{{__('content.Name')}}</th>
+        <th scope="col">{{__('content.In_cart')}}</th>
         <th scope="col">+/-</th>
 
 
