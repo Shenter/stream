@@ -20,16 +20,14 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
 
+                <form action="{{route('product.update',['product'=>$product->id])}}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    {{__('content.Title')}}: <input type="text" name="title" value="{{$product->title}}">
 
-
-           <form action="{{route('product.update',['product'=>$product->id])}}"  method="POST">
-               @csrf
-               @method('PUT')
-               {{__('content.Title')}}: <input type="text" name="title" value="{{$product->title}}">
-
-               {{__('content.Price')}}: <input type="number" name="price" value="{{$product->price/100}}">
-               <input type="submit" value="{{__('content.Save')}}">
-           </form>
+                    {{__('content.Price')}}: <input type="number" name="price" value="{{$product->price/100}}">
+                    <input type="submit" value="{{__('content.Save')}}">
+                </form>
             </div>
         </div>
     </section>
