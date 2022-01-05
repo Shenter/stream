@@ -21,7 +21,7 @@
 
 `docker exec app php artisan db:seed`
 
-![Stream] (https://github.com/Shenter/stream/raw/master/image.gif)
+![Stream] (https://raw.githubusercontent.com/Shenter/stream/master/image.gif)
 
 
 ## Тестовая задача
