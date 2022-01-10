@@ -21,6 +21,10 @@
 
 `docker exec app php artisan db:seed`
 
+Перейти в 
+http://localhost:8080
+Имя пользователя/пароль admin@admin.com/123
+
 ![Stream](https://raw.githubusercontent.com/Shenter/stream/master/image.gif)
 
 
